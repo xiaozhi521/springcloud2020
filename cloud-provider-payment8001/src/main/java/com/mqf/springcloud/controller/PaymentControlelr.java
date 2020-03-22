@@ -18,7 +18,7 @@ public class PaymentControlelr {
 
 
     @PostMapping(value = "/add")
-    public CommonResult add(Payment payment){
+    public CommonResult add(@RequestBody Payment payment){
         int result = paymentService.add(payment);
         log.info("***** 插入结果：" + result);
         if(result > 0){
