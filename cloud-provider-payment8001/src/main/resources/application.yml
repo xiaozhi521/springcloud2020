@@ -17,12 +17,16 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      #defaultZone: http://localhost:7001/eureka
-      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      defaultZone: http://localhost:7001/eureka
+      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
     register-with-eureka: true #表示是否将自己注册进 eurekaServer，默认为true
   instance:
     instance-id: payment8001  #自定义服务名称信息
     prefer-ip-address: true     #访问路径可以显示IP地址
+    #Eureka客户端向服务端发送心跳的时间间隔，单位为秒（默认是30秒）
+    lease-renewal-interval-in-seconds: 1
+    #Eureka服务器端在收到最后一次心跳后等待时间上限，单位为秒（默认是90秒），超时将剔除服务
+    lease-expiration-duration-in-seconds: 2
 
 
 mybatis:
