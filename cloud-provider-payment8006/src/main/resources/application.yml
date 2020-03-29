@@ -1,0 +1,15 @@
+#8004 consul端口号
+server:
+  port: 8006
+
+
+#服务别名----注册 consul 到注册中心的名称
+spring:
+  application:
+    name: consul-provider-payment
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
