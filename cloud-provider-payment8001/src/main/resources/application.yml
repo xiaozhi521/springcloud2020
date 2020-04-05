@@ -17,8 +17,8 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://localhost:7001/eureka
-      #defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+      #defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
     register-with-eureka: true #表示是否将自己注册进 eurekaServer，默认为true
   instance:
     instance-id: payment8001  #自定义服务名称信息
