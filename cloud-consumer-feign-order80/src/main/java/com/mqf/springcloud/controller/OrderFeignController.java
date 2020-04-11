@@ -26,4 +26,11 @@ public class OrderFeignController {
         System.out.println("11111111111");
         return paymentFeignService.getPaymentById(id);
     }
+
+
+    @GetMapping(value = "/payment/feign/timeout")
+    public String paymentFeignTimeout(){
+        //openfeign-ribbon ，客户端一般默认等待一秒钟
+        return paymentFeignService.paymentFeignTimeout();
+    }
 }
