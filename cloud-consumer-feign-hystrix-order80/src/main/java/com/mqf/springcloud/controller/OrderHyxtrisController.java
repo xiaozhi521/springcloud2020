@@ -26,7 +26,7 @@ public class OrderHyxtrisController {
     }
 
 
-    @GetMapping(value = "/payment/hystrix/timeout/{id}")
+    @GetMapping(value = "/consumer/payment/hystrix/timeout/{id}")
     public String paymentInfo_timeOut(@PathVariable("id") Integer id){
         String result = orderHystrixService.paymentInfo_timeOut(id);
         return result;
