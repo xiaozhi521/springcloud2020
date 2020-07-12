@@ -11,4 +11,7 @@ eureka:
 
 
 
-
+#开启客户端降级
+feign:
+  hystrix:
+    enabled: true
