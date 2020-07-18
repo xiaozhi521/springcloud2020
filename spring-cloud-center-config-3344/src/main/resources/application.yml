@@ -1,0 +1,35 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-center-config
+  cloud:
+    config:
+      server:
+        git:
+#          uri:  git@github.com:xiaozhi521/springcloud2020config.git   #GitHub上面的git仓库名字
+          uri:  https://github.com/xiaozhi521/springcloud2020config.git  #GitHub上面的git仓库名字
+          username: xxx
+          password: xxx
+          search-paths:
+            - springcloud2020config
+      health:                 #健康监测   http://localhost:3344/health
+        repositories:
+          check:
+            name: cloud-center-config  #应用名
+            lable: master     #分支名
+            profiles: default #环境名
+        enable: true         #关闭健康监测
+  security:
+    user:
+      name: user
+      password: 37cc5635-559b-4e6f-b633-7e932b813f73
+
+#服务注册到Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+
