@@ -13,6 +13,12 @@
 
     <dependencies>
 
+        <!--actuator 监控（除了网关不加，其它的都加）-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--SpringCloud Config-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
