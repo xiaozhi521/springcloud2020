@@ -13,6 +13,11 @@
 
     <dependencies>
 
+        <!--添加消息总线RabbitMQ支持-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bus-amqp</artifactId>
+        </dependency>
         <!--actuator 监控（除了网关不加，其它的都加）-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
